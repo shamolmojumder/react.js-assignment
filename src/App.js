@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import data from './components/data/data.json'
 import Body from './components/Body/Body';
