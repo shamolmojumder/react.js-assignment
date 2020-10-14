@@ -1,23 +1,24 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import data from './components/data/data.json'
+import data from './data/json_data.json'
 import Body from './components/Body/Body';
 
+
 function App() {
-  console.log(data);
+const [clubs,setClubs]=useState([]);
 
-
-
+useEffect(()=>{
+  setClubs(data)
+},[])
   return (
     <div className="App">
-
-      <Body data={data}></Body>
-      <ul>
-        {
-          data.map(dat=> <li> {dat.fullname} </li> )
-        }
-      </ul>
+      <h1>Total data: {data.length}  </h1>
+      {
+        clubs.map(club=> <Body club={club}></Body> )
+      }
+ 
+    
+     
     </div>
   );
 }
