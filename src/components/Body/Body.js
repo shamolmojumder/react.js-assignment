@@ -4,6 +4,7 @@ const Body = (props) => {
 console.log(props);
 
 const {fullname,email,phone,gender,salary}=props.club
+const handleButton=props.handleButton
 const bodydiv={
 border:"1px solid gray",
 margin:'5px',
@@ -21,7 +22,7 @@ return (
         <h4> {email} </h4>
         <h4> {phone} </h4>
         <h4> $ {salary}</h4>
-        <button>Add </button>
+        <button onClick={()=>handleButton(props.club)}>Add </button>
 
     </div>
 </div>
